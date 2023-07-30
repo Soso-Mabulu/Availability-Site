@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us | Soso Unplugged</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Custom Page Link to css -->
+    <link rel="stylesheet" href="css/contact.css">
+    <!-- Link Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link Google Fonts (young, mid-style font) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="Index.html">
+                <!--logo image-->
+                <img src="images/site-logo.png" alt="Your Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <!-- Add your Signup and Login links here -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="Index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="notes.html">My Notes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Assist Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Partner section -->
+    <section class="partners" id="partners">
+        <div class="container">
+        <h3>Our Partner</h3>
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center">
+            <div class="partner-card" data-toggle="modal" data-target="#partnerModal">
+                <img src="images/top-banner-author.jpg" alt="Solulele Mabulu" class="rounded-partner-logo">
+                <div class="partner-name">Solulele "Soso" Mabulu</div>
+                <div class="partner-role">Founder and Tutor</div>
+                <button class="view-profile-btn">View Profile</button>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    
+    <!-- Partner's Modal -->
+    <div class="modal fade" id="partnerModal" tabindex="-1" role="dialog" aria-labelledby="partnerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="partnerModalLabel">Solulele "Soso" Mabulu</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <img src="images/about-me.jpg" alt="Solulele Mabulu" class="rounded-partner-logo">
+            <p>
+                Solulele "Soso" Mabulu is the founder and tutor at Soso Unplugged. He is passionate about helping individuals excel in their coding journey. Soso specializes in programming languages like Java, Python, C++, and JavaScript. He believes in a practical approach to learning and strives to make complex concepts easy to understand.
+            </p>
+            <a href="https://soso-mabulu.github.io" class="view-profile-modal-btn">View Full Profile</a>
+            </div>
+        </div>
+        </div>
+    </div>
+  
+    <!-- Contact Section -->
+    <div class="card contact-card">
+        <div class="card-body">
+            <div class="topic-text">Send us a message</div>
+            <p>If you have any questions or queries related to my tutorials or if you want to collaborate, you can send me a message using the form below. I'll be happy to help you!</p>
+            <form action="#">
+                <div class="input-box">
+                    <input type="text" placeholder="Contact Subject"> <!-- Add the subject input field -->
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Enter your name">
+                </div>
+                <div class="input-box">
+                    <input type="email" placeholder="Enter your email">
+                </div>
+                <div class="input-box message-box">
+                    <textarea placeholder="Your message"></textarea>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Send Now">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Contact Us</h4>
+                    <p>Email: solulelekwani@gmail.com</p>
+                    <p>Phone: +27 65 724 3048</p>
+                </div>
+                <br>
+                <br>
+                <div class="col-md-4">
+                    <h4>Follow Us</h4>
+                    <br>
+                    <div class="social-icons">
+                        <a href="https://wa.me/27657243048" target="_blank" class="social-icon">
+                            <img src="./images/social-whatsapp.png" alt="WhatsApp">
+                        </a>
+                        <a href="https://www.instagram.com/sosounplugged/" target="_blank" class="social-icon">
+                            <img src="./images/social-instagram.png" alt="Instagram">
+                        </a>
+                        <a href="https://youtube.com/@SosoUnplugged" target="_blank" class="social-icon">
+                            <img src="./images/social-youtube.png" alt="YouTube">
+                        </a>
+                        <a href="https://www.linkedin.com/in/solulele-mabulu-5aaa1226a/" target="_blank" class="social-icon">
+                            <img src="./images/social-linkedIn.png" alt="LinkedIn">
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100076461759123" target="_blank" class="social-icon">
+                            <img src="./images/social-facebook.png" alt="Facebook">
+                        </a>
+                    </div>                    
+                </div>
+                <br>
+                <br>
+                <div class="col-md-4">
+                    <h4>Address</h4>
+                    <p>50 Steve Biko Street, Potchefstroom, 2025, North West</p>
+                </div>
+            </div>
+            <hr>
+            <p>&copy; 2023 Soso-Unplugged. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Link Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // JavaScript to show/hide the partner modal
+        const partnerCards = document.querySelectorAll('.partner-card');
+        const partnerModal = document.getElementById('partnerModal');
+        const modalClose = partnerModal.querySelector('.close');
+
+        partnerCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const modalId = card.dataset.modal;
+                const modal = document.getElementById(modalId);
+                modal.style.display = 'block';
+
+                modalClose.addEventListener('click', () => {
+                    modal.style.display = 'none';
+                });
+
+                window.addEventListener('click', (event) => {
+                    if (event.target === modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+/* Global styles (move them to your CSS files) */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.left-side, .right-side {
+    flex-basis: 100%;
+    margin-bottom: 2rem;
+}
+
+.right-side {
+    text-align: center;
+}
+
+.topic-text {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.right-side p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-box {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.input-box input, .input-box textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-box input:focus, .input-box textarea:focus {
+    border-color: #007bff;
+}
+
+.button {
+    text-align: center;
+}
+
+.button input[type="submit"] {
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #1a73af;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.button input[type="submit"]:hover {
+    background-color: #0465b8;
+}
+
+/* Styles for Partner Section */
+.partners {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .partners h3 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+  
+  .partner-card {
+    margin: 1.2rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    height: 100%;
+  }
+  
+  .partner-card img {
+    width: 100%;
+    height: 200px; /* Adjust the height as needed for a consistent appearance */
+    object-fit: cover;
+    border-radius: 10px; /* Add rounded corners to the images */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .partner-card .partner-name {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .partner-card .partner-role {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .partner-card .view-profile-btn {
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #1a73af;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .partner-card .view-profile-btn:hover {
+    background-color: #0465b8;
+  }
+  
+  /* Partner's Modal */
+  .modal-dialog {
+    max-width: 500px;
+  }
+  
+  .modal-content {
+    border-radius: 10px;
+  }
+  
+  .modal-content img.rounded-partner-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .modal-content .modal-body p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-content .view-profile-modal-btn {
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #1a73af;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modal-content .view-profile-modal-btn:hover {
+    background-color: #0465b8;
+  }
+  
+
+.view-profile-modal-btn {
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #1a73af;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.view-profile-modal-btn:hover {
+    background-color: #0465b8;
+}
+
+/* The Contact Us section styles */
+.left-side, .right-side {
+    flex-basis: 100%;
+    margin-bottom: 2rem;
+}
+
+.right-side {
+    text-align: center;
+}
+
+.topic-text {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.right-side p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-box {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.input-box input, .input-box textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-box input:focus, .input-box textarea:focus {
+    border-color: #007bff;
+}
+
+.button {
+    text-align: center;
+}
+
+.button input[type="submit"] {
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #1a73af;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.button input[type="submit"]:hover {
+    background-color: #0465b8;
+}
+
+/* The responsive styles */
+@media (max-width: 992px) {
+    .content {
+        flex-wrap: wrap;
+    }
+
+    .left-side, .right-side {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        max-width: 100%;
+    }
+}
+
+/* Styling for the Contact Section Card */
+.contact-card {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.topic-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1a73af; /* Use the main theme color */
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.contact-card form {
+    margin-top: 15px; /* Add some top margin for the form */
+}
+
+.contact-card .input-box {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.contact-card input[type="text"],
+.contact-card input[type="email"],
+.contact-card textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact-card input[type="text"]:focus,
+.contact-card input[type="email"]:focus,
+.contact-card textarea:focus {
+    border-color: #007bff;
+}
+
+.contact-card .button {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+
+}
+
+.contact-card input[type="submit"] {
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    border-radius: 30px;
+    width: 50%;
+    cursor: pointer;
+    background-color: #e6e7eb;
+    color: #1a73af;
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+    text-shadow: none;
+}
+
+.contact-card input[type="submit"]:hover {
+    background-color: #46b2f5;
+    color: #fff;
+    text-shadow: none;
+}
+
+/* The responsive styles */
+@media (max-width: 768px) {
+    .contact-card input[type="submit"] {
+        width: 100%;
+    }
+    .contact-card .button {
+        width: 50%;
+    }
+}
+.navbar{
+    min-height: 50px;
+    margin-bottom: 0;
+}
