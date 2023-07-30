@@ -1,0 +1,67 @@
+/* Add your additional CSS styles here */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Adjust the navbar height */
+.navbar {
+    min-height: 80px;
+}
+
+/* Style the logo image */
+.navbar-brand img {
+    max-height: 50px;
+    width: auto;
+}
+
+/* Adjust the right side of the navbar */
+.navbar-nav.ml-auto {
+    margin-right: 20px;
+}
+
+/* Style the "Get Started" button */
+.btn-get-started {
+    background-color: #0d3ec5;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Make the button responsive */
+@media (max-width: 576px) {
+    .btn-get-started {
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+}
+
+/* Add more styles for your content here */
+
+/* The Footer styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.footer a:hover {
+    color: #4CAF50;
+}
+
+/* Responsive styles for the logo */
+@media (max-width: 768px) {
+    .navbar-brand img {
+        max-height: 40px;
+    }
+}
