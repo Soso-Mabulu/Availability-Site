@@ -26,6 +26,7 @@
     border: 2px solid #fff;
     object-fit: cover;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to the logo */
+    background-color: black;
 }
 
 .masthead h1, .masthead .h1 {
@@ -181,4 +182,176 @@
     background-color: #46b2f5;
     color: #fff;
     text-shadow: none;
+}
+.form-container h3 {
+    /* Add some top margin to the form header */
+    margin-top: 0.5rem;
+    margin-bottom: 4%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.form-container {
+    /* Additional styles for the form container */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-in-out;
+    text-align: center;
+}
+
+/* Updated form input styles */
+.form-container input,
+.form-container select,
+.form-container textarea {
+    /* Add styles for rounded and centered input areas */
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+    /* Add focus styles for the input areas */
+    border-color: #007bff;
+}
+
+/* Updated Book Now button styles */
+.form-container button {
+    font-size: 1.2rem;
+    padding: 12px 30px; /* Increase padding for better button size */
+    border-radius: 30px;
+    width: 50%;
+    cursor: pointer;
+    background-color: #e6e7eb;
+    color: #1a73af;
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+    text-shadow: none;
+    animation: pulse 2s infinite; /* Add a pulse animation to the button */;
+    text-align: center;
+}
+
+.form-container button:hover {
+    background-color: #46b2f5;
+    color: #fff;
+    text-shadow: none;
+}
+
+/* Make the form responsive */
+@media (max-width: 576px) {
+    .form-container button {
+        width: 100%;
+    }
+}
+/* The Our Services section styles */
+.our-services {
+    padding: 6rem 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.our-services h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.our-services .service-card {
+    margin: 1rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.our-services .service-card:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Style the images to be rounded */
+.our-services .service-card img {
+    width: 100%;
+    height: 200px; /* Adjust the height as needed for a consistent appearance */
+    object-fit: cover;
+    border-radius: 10px; /* Add rounded corners to the images */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.our-services .service-card:hover img {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.our-services .service-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.our-services .service-description {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* The responsive styles */
+@media (max-width: 576px) {
+    .masthead .h1 {
+        font-size: 2.5rem;
+    }
+    .masthead .h2 {
+        font-size: 1rem;
+    }
+    .form-container {
+        max-width: 80%;
+    }
+    .our-services {
+        padding: 3rem 0;
+    }
+    .our-services .service-card {
+        padding: 1.5rem;
+    }
+    .our-services .service-icon {
+        font-size: 2rem;
+    }
+    .our-services .service-title {
+        font-size: 1.2rem;
+    }
+    .our-services .service-description {
+        font-size: 1rem;
+    }
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 8px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
 }
