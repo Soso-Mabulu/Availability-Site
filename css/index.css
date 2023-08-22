@@ -355,3 +355,41 @@
 .social-icon:hover {
     transform: scale(1.2);
 }
+/* Update the radio button group styling */
+.form-group.radio-group {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-group.radio-group label {
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.form-group.radio-group input[type="radio"] {
+    margin-right: 5px;
+    transform: scale(1.2); /* Increase radio button size */
+}
+/* Update the date input styling */
+.form-group.date-group {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-group.date-group label {
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.form-group.date-group input[type="date"] {
+    max-width: 180px; /* Adjust width as needed */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px; /* Adjust font size */
+}
+

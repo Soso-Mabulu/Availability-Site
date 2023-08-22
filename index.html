@@ -217,17 +217,29 @@
                         <!-- Add more options as needed -->
                     </select>
                 </div>
-                <div class="form-group">
-                    <label>Select Preferred Time:</label>
-                    <!-- Add a list of times you will be available for tutoring -->
-                    <input type="radio" name="time" value="morning">Morning
-                    <input type="radio" name="time" value="afternoon">Afternoon
-                    <input type="radio" name="time" value="evening">Evening
+                <!-- Inside the form -->
+                <div>
+                    <label class="time text-center"><strong>Select Preferred Time:</strong></label>
                 </div>
+                <br>
+                <div class="form-group radio-group text-center">
+                    <div>
+                        <input type="radio" name="time" value="morning">
+                        <label>Morning</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="time" value="afternoon">
+                        <label>Afternoon</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="time" value="evening">
+                        <label>Evening</label>
+                    </div>
+                </div>
+                <br>
                 <div class="form-group">
-                    <label>Select Preferred Date:</label>
-                    <!-- Add a calendar for selecting a day in the coming weekdays -->
-                    <input type="date" name="preferred-date">
+                    <label for="preferred-date">Select Preferred Date:</label>
+                    <input type="date" id="preferred-date" name="preferred-date" min="yyyy-mm-dd" required>
                 </div>
                 <div class="form-group">
                     <textarea name="Extra-request" placeholder="Any Extra Request"></textarea>
@@ -290,6 +302,27 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const dateInput = document.getElementById("preferred-date");
+            const today = new Date();
+            const dayOfWeek = today.getDay(); // 0 (Sunday) to 6 (Saturday)
+    
+            // Disable Sundays
+            dateInput.addEventListener("input", function () {
+                const selectedDate = new Date(dateInput.value);
+                const selectedDayOfWeek = selectedDate.getDay();
+                if (selectedDayOfWeek === 0) {
+                    dateInput.setCustomValidity("Please select a date other than Sunday.");
+                } else {
+                    dateInput.setCustomValidity("");
+                }
+            });
+    
+            // Disable past dates
+            dateInput.setAttribute("min", today.toISOString().split("T")[0]);
+        });
+    </script>
 
 </body>
 </html>
