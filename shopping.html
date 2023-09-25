@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px 20px 40px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            height: 100%;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .list-container {
+            margin-bottom: 20px;
+        }
+
+        .add-container {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .add-input {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .add-button {
+            flex: 0.5;
+        }
+
+        .item-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .item input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .total-container {
+            text-align: center;
+        }
+        .footer{
+            background-color: #0d0d0e;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .navbar-brand img{
+            border-radius: 30%;
+            width: 50px;
+            height: 50px;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="Index.html">
+                <!--logo image-->
+                <img src="images/site-logo.png" alt="Your Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <!-- Add your Signup and Login links here -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="Index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="notes.html">My Notes</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="shopping.html">View Shopping list</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="assistUs.html">Assist Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script>
+        document.getElementById("navbar-toggler").addEventListener("click", function () {
+            var navbarCollapse = document.getElementById("navbar-collapse");
+            if (navbarCollapse.style.maxHeight) {
+                navbarCollapse.style.maxHeight = null;
+            } else {
+                navbarCollapse.style.maxHeight = navbarCollapse.scrollHeight + "px";
+            }
+        });
+    </script>
+    <br>
+    <br>
+    <!-- Main Content -->
+    <div class="container">
+        <h1 class="heading">Shopping List</h1>
+
+        <div class="list-container">
+            <ul class="item-list">
+                <!-- List items will be dynamically added here -->
+            </ul>
+        </div>
+
+        <div class="add-container">
+            <input type="text" class="form-control add-input" id="new-item" placeholder="Add new item">
+            <button class="btn btn-primary add-button" id="add-button">Add</button>
+        </div>
+
+        <div class="total-container">
+            <div class="form-group">
+                <label for="total-budget">Total Budget:</label>
+                <input type="number" class="form-control" id="total-budget">
+            </div>
+
+            <div class="form-group">
+                <label for="shopping-day">Shopping Day:</label>
+                <input type="date" class="form-control" id="shopping-day">
+            </div>
+
+            <p id="budget-status"></p>
+        </div>
+    </div>
+    <br><br>
+    <!-- Footer -->
+    <footer class="footer">
+        <div>
+            <p>&copy; 2023 Task Master. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Function to create a new list item
+        function createListItem(text, price) {
+            const listItem = document.createElement("li");
+            listItem.className = "item";
+            listItem.innerHTML = `
+                <input type="checkbox">
+                <span>${text}</span>
+                <span>R${price.toFixed(2)}</span>
+                <button class="btn btn-danger delete-button">Delete</button>
+            `;
+            return listItem;
+        }
+
+        // Function to update the item list
+        function updateItemList() {
+            const itemList = document.querySelector(".item-list");
+            itemList.innerHTML = "";
+
+            for (const item of items) {
+                const listItem = createListItem(item.text, item.price);
+                const checkbox = listItem.querySelector("input[type='checkbox']");
+                const deleteButton = listItem.querySelector(".delete-button");
+
+                checkbox.checked = item.checked;
+                checkbox.addEventListener("change", () => {
+                    item.checked = checkbox.checked;
+                    updateItemsInCookies();
+                    updateItemList();
+                    updateBudgetStatus();
+                });
+
+                deleteButton.addEventListener("click", () => {
+                    items = items.filter((i) => i !== item);
+                    updateItemsInCookies();
+                    updateItemList();
+                    updateBudgetStatus();
+                });
+
+                itemList.appendChild(listItem);
+            }
+        }
+
+        // Function to update the items in cookies
+        function updateItemsInCookies() {
+            const expirationDate = new Date();
+            expirationDate.setDate(expirationDate.getDate() + 7);
+
+            document.cookie = `groceryList=${JSON.stringify(items)}; expires=${expirationDate.toUTCString()}`;
+        }
+
+        // Function to update budget status
+        function updateBudgetStatus() {
+            const totalBudget = parseFloat(document.getElementById("total-budget").value);
+            const totalCost = items.filter(item => item.checked).reduce((acc, item) => acc + item.price, 0);
+
+            const budgetStatus = document.getElementById("budget-status");
+            if (totalCost > totalBudget) {
+                budgetStatus.innerHTML = `You are over budget by R${(totalCost - totalBudget).toFixed(2)}`;
+                budgetStatus.style.color = "red";
+            } else {
+                budgetStatus.innerHTML = `You are under budget by R${(totalBudget - totalCost).toFixed(2)}`;
+                budgetStatus.style.color = "green";
+            }
+        }
+
+        // Load items from cookies (if available)
+        let items = [];
+        const cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)groceryList\s*=\s*([^;]*).*$)|^.*$/, "$1");
+        if (cookieValue) {
+            items = JSON.parse(cookieValue);
+        }
+
+        // Handle adding new item
+        const addButton = document.getElementById("add-button");
+        addButton.addEventListener("click", () => {
+            const newItemInput = document.getElementById("new-item");
+            const newItemText = newItemInput.value.trim();
+            if (newItemText !== "") {
+                const newItemPrice = parseFloat(prompt("Enter the price for the item:"));
+                if (!isNaN(newItemPrice)) {
+                    items.push({ text: newItemText, price: newItemPrice, checked: false });
+                    updateItemsInCookies();
+                    updateItemList();
+                    updateBudgetStatus();
+                    newItemInput.value = "";
+                } else {
+                    alert("Please enter a valid price.");
+                }
+            }
+        });
+
+        // Handle shopping day
+        const shoppingDayInput = document.getElementById("shopping-day");
+        shoppingDayInput.addEventListener("change", () => {
+            const shoppingDate = new Date(shoppingDayInput.value);
+            if (!isNaN(shoppingDate)) {
+                const expirationDate = new Date();
+                expirationDate.setDate(shoppingDate.getDate() + 1);
+                updateItemsInCookies();
+            }
+        });
+
+        // Handle budget input
+        const totalBudgetInput = document.getElementById("total-budget");
+        totalBudgetInput.addEventListener("input", updateBudgetStatus);
+
+        // Initial update of item list and budget status
+        updateItemList();
+        updateBudgetStatus();
+    </script>
+    
+</body>
+</html>
