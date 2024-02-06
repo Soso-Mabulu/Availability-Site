@@ -374,3 +374,48 @@
     font-size: 14px; /* Adjust font size */
 }
 
+.pricing {
+    padding: 50px 0;
+    background: linear-gradient(135deg, #00bfff, #00ff00);
+    color: #fff;
+    text-align: center;
+}
+
+.pricing-card {
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+}
+
+.pricing-card h4 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.pricing-card p {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.savings {
+    color: #28a745;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.session-description {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #555;
+}
+

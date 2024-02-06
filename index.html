@@ -41,6 +41,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="process.html">Process (Q&A)</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -51,9 +54,9 @@
         <br>
         <br>
         <!-- Add the logo image -->
-        <img src="images/site-logo.png" alt="Soso Unplugged Logo" class="rounded-logo masthead-logo">
+        <img src="images/site-logo-bg.jpg" alt="Soso Unplugged Logo" class="rounded-logo masthead-logo">
         <br>
-        <h1>Soso Unplugged |Tutors</h1>
+        <h1>Soso Unplugged Tutors Program</h1>
         <h2>Empowering Minds, One Connection at a Time</h2>
         <br>
         <a class="btn-get-started" href="#our-services">Get Started</a>
@@ -189,13 +192,47 @@
         </div>
     </section>
 
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="container">
+            <h3 class="text-center">Pricing</h3>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="pricing-card">
+                        <h4>One Session</h4>
+                        <p>R70</p>
+                        <p class="session-description">Receive focused, personalized tutoring tailored to your specific needs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-card">
+                        <h4>Three Sessions</h4>
+                        <p>R190</p>
+                        <p class="savings">Save R20</p>
+                        <p class="session-description">Delve deeper into your studies with extended support and guidance spread across multiple sessions.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-card">
+                        <h4>Six Sessions</h4>
+                        <p>R350</p>
+                        <p class="savings">Save R70</p>
+                        <p class="session-description">Maximize your learning potential with comprehensive tutoring, allowing ample time for review, practice, and refinement of skills.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Tutor Help Form -->
     <br>
+  <!-- Tutor Help Form -->
     <section class="tutor-help">
         <div class="container form-container">
             <h3>Get Tutor Help</h3>
-            <form   action="https://formspree.io/f/xwkdvloe" method="POST">
+            <form action="https://formspree.io/f/xwkdvloe" method="POST">
                 <div class="form-group">
                     <input type="text" name="fullname" placeholder="Name and Surname" required>
                 </div>
@@ -206,17 +243,34 @@
                     <input type="tel" name="phone" placeholder="Phone Number" required>
                 </div>
                 <div class="form-group">
-                    <select name="module" required>
-                        <option value="" disabled selected>Select Module</option>
-                        <!-- Add options for all modules you did -->
+                    <label for="module">Module Code:</label>
+                    <select name="module" id="module" required>
+                        <option value="" disabled selected>Select or Type Module Code</option>
                         <option value="CMPG 121">CMPG 121</option>
                         <option value="CMPG 122">CMPG 122</option>
                         <option value="ACCS 121">ACCS 121</option>
                         <option value="ACCF 121">ACCF 121</option>
                         <option value="STTN 121">STTN 121</option>
                         <option value="ALDE 122">ALDE 122</option>
-                        <!-- Add more options as needed -->
+                        <option value="CMPG 121">CMPG 211</option>
+                        <option value="CMPG 121">CMPG 212</option>
+                        <option value="CMPG 121">CMPG 213</option>
+                        <option value="CMPG 121">CMPG 214</option>
+                        <option value="CMPG 121">CMPG 215</option>
+                        <option value="CMPG 121">WVNS 211</option>
+                        <option value="Other">Other</option>
                     </select>
+                </div>
+                <div id="other-module" style="display: none;">
+                    <div class="form-group">
+                        <label for="other-module">Enter Module Code:</label>
+                        <input type="text" name="other-module" id="other-module-input" placeholder="Type Module Code">
+                    </div>
+                </div>
+                
+                <!-- Add the number of sessions booked -->
+                <div class="form-group">
+                    <input type="number" name="sessions-booked" placeholder="Number of Sessions Booked" required>
                 </div>
                 <!-- Inside the form -->
                 <div>
@@ -243,6 +297,16 @@
                     <input type="date" id="preferred-date" name="preferred-date" min="yyyy-mm-dd" required>
                 </div>
                 <div class="form-group">
+                    <label for="contact-preference">Preferred Way of Contact:</label>
+                    <select name="contact-preference" id="contact-preference" required>
+                        <option value="" disabled selected>Select Preferred Contact Method</option>
+                        <option value="chat">Chat</option>
+                        <option value="whatsapp">WhatsApp</option>
+                        <option value="email">Email</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
                     <textarea name="Extra-request" placeholder="Any Extra Request"></textarea>
                 </div>
                 <button type="submit">Book Now</button>
@@ -250,8 +314,20 @@
         </div>
         <br>
         <br>
-        
     </section>
+
+    <script>
+        // Script to show/hide the other module input field based on selection
+        document.getElementById("module").addEventListener("change", function() {
+            var otherModuleField = document.getElementById("other-module");
+            if (this.value === "Other") {
+                otherModuleField.style.display = "block";
+            } else {
+                otherModuleField.style.display = "none";
+            }
+        });
+    </script>
+
 
     
 
@@ -324,6 +400,30 @@
             dateInput.setAttribute("min", today.toISOString().split("T")[0]);
         });
     </script>
+    
+    <script>
+        // Function to handle module selection
+        function handleModuleSelection() {
+            const moduleSelect = document.getElementById('module');
+            const otherModuleDiv = document.getElementById('other-module');
+            const otherModuleInput = document.getElementById('other-module-input');
+            
+            // If "Other" is selected, show the input field for manual input
+            if (moduleSelect.value === 'Other') {
+                otherModuleDiv.style.display = 'block';
+                otherModuleInput.required = true;
+            } else {
+                otherModuleDiv.style.display = 'none';
+                otherModuleInput.required = false;
+                otherModuleInput.value = ''; // Clear input field
+            }
+        }
+
+        // Event listener for module selection
+        document.getElementById('module').addEventListener('change', handleModuleSelection);
+    </script>
+
+    
 
 </body>
 </html>

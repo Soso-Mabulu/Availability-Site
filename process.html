@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Notes | Soso Unplugged</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Fontawesome CDN Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link Google Fonts (young, mid-style font) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-    <!-- Custom Page Link to CSS -->
-    <link rel="stylesheet" href="css/mynotes.css">
+    <title>Process | Soso Unplugged</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Add your custom CSS file link here -->
+    <link rel="stylesheet" href="css/process.css">
     <!-- Link Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link Google Fonts (young, mid-style font) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -32,7 +30,7 @@
                         <a class="nav-link" href="Index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="notes.html">My Notes</a>
+                        <a class="nav-link" href="Auth.html">Chat</a>
                     </li>
                     <li>
                         <a class="nav-link" href="shopping.html">View Shopping list</a>
@@ -51,23 +49,79 @@
         </div>
     </nav>
 
-    <!-- My Notes Content -->
-    <div class="my-notes-content">
-        <h2>My Notes</h2>
-        <!-- Add your notes categories and content here -->
-        <!-- If no notes are uploaded, display the message -->
-        <div class="no-notes-message">
-            <i class="fas fa-file-alt"></i>
-            <p>No notes uploaded yet.</p>
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <h2 class="section-heading">Our Booking Process</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-description">
+                            <h3>Browse Services</h3>
+                            <p>Explore our range of tutoring services, including programming, database management, and networking.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-description">
+                            <h3>Select Module</h3>
+                            <p>Choose the specific module or subject you need assistance with from the dropdown menu.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-description">
+                            <h3>Choose Session Package</h3>
+                            <p>Select the number of tutoring sessions you'd like to book: one session, three sessions, or six sessions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-description">
+                            <h3>Book Session</h3>
+                            <p>Fill out the booking form with your name, email, phone number, preferred time, and date.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <div class="step-description">
+                            <h3>Appoint a Tutor</h3>
+                            <p>Our team will appoint a suitable tutor for your module who will then contact you to confirm location, time, and date.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="process-step">
+                        <div class="step-number">6</div>
+                        <div class="step-description">
+                            <h3>Confirmation</h3>
+                            <p>Receive a confirmation email with details of your booked session, including tutor information and session logistics.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="process-step">
+                        <div class="step-number">7</div>
+                        <div class="step-description">
+                            <h3>Attend Session</h3>
+                            <p>Join the scheduled tutoring session at the specified time via the provided video conferencing link.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Back Button -->
-    <div class="back-button">
-        <a href="Index.html" class="btn-back">Back</a>
-    </div>
-
-    <!-- Footer -->
+    !-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -115,5 +169,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
 </body>
 </html>
