@@ -83,42 +83,71 @@
     </header>
 
 
-    <!-- Our Services section -->
-    <section class="our-services" id="our-services">
-        <div class="container">
-            <h3>Our Services</h3>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="service-card" data-toggle="modal" data-target="#programmingModal">
-                        <img src="images/programming.jpg" alt="Programming Tutoring">
-                        <div class="service-title">Programming</div>
-                        
-                        <div class="service-description">
-                            Get expert assistance in programming languages like Java, Python, C++, and more.
-                        </div>
+    <!-- Our Specialized Tutoring section -->
+<section class="our-services" id="our-services">
+    <div class="container">
+        <h3>Our Specialized Tutoring</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="service-card" data-toggle="modal" data-target="#programmingModal">
+                    <img src="images/programming.jpg" alt="Programming Tutoring">
+                    <div class="service-title">Programming Tutoring</div>
+                    <div class="service-description">
+                        Expert guidance in programming languages like Java, Python, C++, and more.
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="service-card" data-toggle="modal" data-target="#databaseModal">
-                        <img src="images/database.jpg" alt="Database Management Tutoring">
-                        <div class="service-title">Database Management</div>
-                        <div class="service-description">
-                            Learn how to design and manage databases efficiently for your projects.
-                        </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card" data-toggle="modal" data-target="#mathematicsModal">
+                    <img src="images/mathematics.jpg" alt="Mathematics Tutoring">
+                    <div class="service-title">Mathematics Tutoring</div>
+                    <div class="service-description">
+                        Personalized support in various branches of mathematics, including algebra, calculus, and statistics.
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="service-card" data-toggle="modal" data-target="#networkingModal">
-                        <img src="images/networking.jpg" alt="Networking Tutoring">
-                        <div class="service-title">Networking</div>
-                        <div class="service-description">
-                            Understand the concepts of computer networks and troubleshooting techniques.
-                        </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card" data-toggle="modal" data-target="#scienceModal">
+                    <img src="images/science.jpg" alt="Science Tutoring">
+                    <div class="service-title">Science Tutoring</div>
+                    <div class="service-description">
+                        Comprehensive assistance in science subjects such as physics, chemistry, and biology.
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="service-card" data-toggle="modal" data-target="#languagesModal">
+                    <img src="images/languages.jpg" alt="Languages Tutoring">
+                    <div class="service-title">Languages Tutoring</div>
+                    <div class="service-description">
+                        Language coaching in English, French, Spanish, and other languages.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card" data-toggle="modal" data-target="#academicSupportModal">
+                    <img src="images/academic-support.jpg" alt="Academic Support">
+                    <div class="service-title">Academic Support</div>
+                    <div class="service-description">
+                        Assistance with homework, assignments, and overall academic performance improvement.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card" data-toggle="modal" data-target="#testPrepModal">
+                    <img src="images/test-preparation.jpg" alt="Test Preparation">
+                    <div class="service-title">Test Preparation</div>
+                    <div class="service-description">
+                        Tailored training for standardized tests like SAT, ACT, Exams, and more.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <!-- Modals for each service -->
     <!-- Programming Modal -->
@@ -143,49 +172,116 @@
         </div>
     </div>
 
-    <!-- Database Modal -->
-    <div class="modal fade" id="databaseModal" tabindex="-1" role="dialog" aria-labelledby="databaseModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="databaseModalLabel">Database Management Tutoring</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        Our database management tutoring service will guide you in designing, implementing, and managing databases for your projects. Gain insights into database systems, SQL queries, and best practices to optimize data storage and retrieval.
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-get-started" data-dismiss="modal">Close</button>
-                </div>
+<!-- Math Modal -->
+<div class="modal fade" id="mathematicsModal" tabindex="-1" role="dialog" aria-labelledby="mathematicsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mathematicsModalLabel">Mathematics Tutoring</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Our mathematics tutoring service offers personalized support in various branches of mathematics, including algebra, calculus, and statistics. Whether you're struggling with equations or seeking advanced problem-solving techniques, our tutors are here to help you succeed.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-get-started" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Networking Modal -->
-    <div class="modal fade" id="networkingModal" tabindex="-1" role="dialog" aria-labelledby="networkingModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="networkingModalLabel">Networking Tutoring</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        Our networking tutoring service will help you grasp the fundamentals of computer networks and equip you with troubleshooting skills. Understand concepts like TCP/IP, routing, and subnetting to excel in networking-related topics.
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-get-started" data-dismiss="modal">Close</button>
-                </div>
+<!-- Science Modal -->
+<div class="modal fade" id="scienceModal" tabindex="-1" role="dialog" aria-labelledby="scienceModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="scienceModalLabel">Science Tutoring</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Our science tutoring service provides comprehensive assistance in science subjects such as physics, chemistry, and biology. From understanding complex theories to conducting experiments, our tutors will help you master the fundamentals and achieve academic success.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-get-started" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
+</div>
+
+<!-- Languages Modal -->
+<div class="modal fade" id="languagesModal" tabindex="-1" role="dialog" aria-labelledby="languagesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="languagesModalLabel">Languages Tutoring</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Our languages tutoring service offers language coaching in English, French, Spanish, and other languages. Whether you're learning for academics, travel, or personal enrichment, our tutors will assist you in achieving fluency and proficiency.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-get-started" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Test Preparation Modal -->
+<div class="modal fade" id="testPrepModal" tabindex="-1" role="dialog" aria-labelledby="testPrepModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="testPrepModalLabel">Test Preparation</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Our test preparation service offers tailored training for standardized tests like SAT, ACT, GRE, and more. Whether you're aiming for a top score or need help with specific sections, our tutors will provide you with strategies and resources to succeed.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-get-started" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Academic Support Modal -->
+<div class="modal fade" id="academicSupportModal" tabindex="-1" role="dialog" aria-labelledby="academicSupportModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="academicSupportModalLabel">Academic Support</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Our academic support service offers assistance with homework, assignments, and overall academic performance improvement. Whether you need help understanding concepts or organizing your study materials, our tutors are here to support your academic journey.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-get-started" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <!-- About Us section -->
     <section class="about-us">
